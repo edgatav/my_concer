@@ -16,10 +16,24 @@
     </ion-page>
   </template>
   
-  <script>
+  <script lang="ts">
   import axios from 'axios';
-  
-  export default {
+  import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonItem, IonLabel, IonInput, IonButton } from '@ionic/vue';
+import { defineComponent } from 'vue';
+
+export default defineComponent({
+    name: 'LoginPage',
+  components: {
+    IonPage,
+    IonHeader,
+    IonToolbar,
+    IonTitle,
+    IonContent,
+    IonItem,
+    IonLabel,
+    IonInput,
+    IonButton,
+  },
     data() {
       return {
         email: '',
@@ -46,7 +60,7 @@
           } else if (role === 'client') {
             this.$router.push('/client');
           }
-        } catch (error) {
+        } catch (error: any) {
           if (error.response && error.response.status === 404) {
             this.errorMessage = 'Utilisateur inexistant';
           } else if (error.response && error.response.status === 400) {
@@ -57,7 +71,7 @@
         }
       },
     },
-  };
+  });
   </script>
   
   <style scoped>

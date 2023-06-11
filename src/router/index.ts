@@ -1,6 +1,8 @@
 import { createRouter, createWebHistory } from '@ionic/vue-router';
-import { RouteRecordRaw } from 'vue-router';
-import LoginPage from '../views/pages/LoginPage.vue';
+import { RouteRecordRaw } from 'vue-router'
+import LoginPage from '../views/pages/LoginPage.vue'
+
+
 
 
 const routes: Array<RouteRecordRaw> = [
