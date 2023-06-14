@@ -14,7 +14,7 @@ export default {
 <template>
   <ion-app>
     <ion-router :use-router="isLoggedIn">
-      <ion-route url="/login" component="login-page"></ion-route>
+      <ion-route url="/home" component="LoginPage"></ion-route>
 
       <!-- Page admin -->
       <ion-route-redirect from="/" to="/admin" :if="isLoggedIn && $route.path === '/'" />
